@@ -1,0 +1,31 @@
+<app-employee></app-employee>
+<h2>{{header}}</h2>
+<p>{{x+y}}</p>
+<p>{{available? 'Yash is available' : 'Bhawana will handle'}}</p>
+<ul>
+  <li>Bhawana</li>
+  <li>Yash</li>
+</ul>
+
+<h3>Property Binding</h3>
+Name :<input type="text" [value]="name">
+
+<h3>Event Binding</h3>
+<button (click)="handleClick($event)">Click Me!</button>
+
+<h3>Two way data binding</h3>
+<input type="text" [(ngModel)]="company">
+<div>{{company}}</div>
+
+<h3 #template class="header">Template reference</h3>
+<button (click)="handleSSN(ssn.value)">Get SSN!</button>
+SSN : <input type="text" #ssn>
+
+
+<h3>Structural Directives</h3>
+<div *ngIf="available" class="available"> Yash Is Available today</div>
+
+<h5>Course Details</h5>
+<ul>
+  <li class="courselist" *ngFor="let item of courses;let i=index"> {{i}}:{{item.name}},{{item.fee}}</li>
+</ul>
