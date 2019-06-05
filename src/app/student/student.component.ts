@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild, ElementRef, OnChanges, AfterViewInit, DoC
 
 interface Course{
   name:string,
-  fee:number
+  fee:number,
+  online:boolean
 }
 
 @Component({
@@ -24,15 +25,18 @@ export class StudentComponent implements OnInit,DoCheck{
   courses:Course[]=[
     {
       name:'java',
-      fee:1000
+      fee:1000,
+      online:true
     },
     {
       name:'android',
-      fee:2000
+      fee:2000,
+      online:false
     },
     {
       name:'Ios',
-      fee:3000
+      fee:3000,
+      online:true
     }
   ];
  
@@ -50,9 +54,9 @@ export class StudentComponent implements OnInit,DoCheck{
     console.log(this.templateVariable)
   }
 
-  ngDoCheck(): void {   
-    console.log(this.ssn)
-  }
+  // ngDoCheck(): void {   
+  //   console.log(this.ssn)
+  // }
   
 
   handleClick($event){

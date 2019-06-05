@@ -22,10 +22,38 @@ Name :<input type="text" [value]="name">
 SSN : <input type="text" #ssn>
 
 
-<h3>Structural Directives</h3>
+<h3>Structural Directives & Attribute Directives</h3>
 <div *ngIf="available" class="available"> Yash Is Available today</div>
 
 <h5>Course Details</h5>
 <ul>
-  <li class="courselist" *ngFor="let item of courses;let i=index"> {{i}}:{{item.name}},{{item.fee}}</li>
+  <li class="courselist" 
+  *ngFor="let item of courses;let i=index"
+   [ngClass]="{'courseOnline': item.online,'courseOffline':! item.online}">   
+    {{i}}:{{item.name}},{{item.fee}}
+  </li>
 </ul>
+
+<h5>NgStyle Directive demo</h5>
+
+<div>
+  Color: <input type="text" placeholder="Enter some value" [(ngModel)]="myColor">
+  <div [ngStyle]="{color: myColor}">
+    <p>CHina</p>
+    <p>India</p>
+    <p>US</p>
+  </div>
+</div>
+
+
+<h3>Pipes Demo</h3>
+
+<ul>
+    <li class="courselist" 
+    *ngFor="let item of courses;let i=index">   
+       {{item.name | uppercase}},{{item.fee |currency}}
+    </li>
+  </ul>
+
+
+
