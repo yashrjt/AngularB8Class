@@ -8,6 +8,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ToggleDirective } from './Directives/toggle.directive';
 
 
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,7 @@ import { ToggleDirective } from './Directives/toggle.directive';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

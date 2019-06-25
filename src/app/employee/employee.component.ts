@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EmployeeComponent implements OnInit {
 
   authForm:FormGroup;
-
+  submitted:boolean=false;
   constructor(private fb:FormBuilder) { }
 
   ngOnInit() {
@@ -21,8 +21,15 @@ export class EmployeeComponent implements OnInit {
     )
   }
 
+  get controls(){
+    return this.authForm.controls;
+  }
   signup(){
-    console.log(this.authForm.value);
+    this.submitted=true;
+   
+    if(this.authForm.valid){
+      console.log(this.authForm.value);
+    }
   }
 
 

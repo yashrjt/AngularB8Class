@@ -2,3 +2,34 @@ ul{
     font-size: 20px;
     color: red;
 }
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-drawer{
+  right:0;
+  transform: none;
+  }
+  
+  /* 
+  .mat-drawer-transition .mat-drawer-backdrop {
+    transition-duration: .1s !important;
+    transition-timing-function: cubic-bezier(.25,.8,.25,1);
+    transition-property:none !important;
+  } */
+  
+  .mat-drawer-transition .mat-drawer-content {
+    transition-duration: none;
+     transition-timing-function: none;
+    transition-property: none;
+  }
+  
+  .mat-drawer-content .mat-sidenav-content{
+    transition-duration: .1s !important;
+  }
+  
+  

@@ -11,7 +11,7 @@ interface Course{
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.css']
 })
-export class StudentComponent implements OnInit,DoCheck{
+export class StudentComponent implements OnInit{
  
   
   
@@ -20,7 +20,7 @@ export class StudentComponent implements OnInit,DoCheck{
   x:number=100;
   y:number=200;
   available:boolean=true;
-  name:string="Eric";
+  name:string="Peiran";
   company:string='RJT';
   courses:Course[]=[
     {
